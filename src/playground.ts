@@ -6,7 +6,7 @@ import HLTV from './index'
 // HLTV.getActiveThreads().then(res => console.log(res))
 // HLTV.getTeamRanking().then(res => console.log(res))
 // HLTV.getTeamRanking({ country: 'Thailand' }).then(res => console.log(res))
-HLTV.connectToScorebot({ id: 2330886, onScoreboardUpdate: (data) => {
+HLTV.connectToScorebot({ id: 2330888, onScoreboardUpdate: (data) => {
     console.log('scoreboard update!')
     console.dir(data, { depth: null })
 }, onLogUpdate: (data) => {
