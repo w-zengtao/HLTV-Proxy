@@ -3,9 +3,9 @@ import { ScoreboardUpdate } from '../models/ScoreboardUpdate'
 import { LogUpdate } from '../models/LogUpdate'
 import { fetchPage } from '../utils/mappers'
 import { HLTVConfig } from '../config'
+import * as url from 'url'
+import { HttpsProxyAgent } from 'https-proxy-agent'
 
-var url = require('url');
-var HttpsProxyAgent = require('https-proxy-agent')
 var proxy = "http://lum-customer-hl_bfa58f09-zone-csgo_proxy-country-us:ukbbyolfwhwk@zproxy.lum-superproxy.io:22225"
 var options = url.parse(proxy)
 var agent = new HttpsProxyAgent(options)
