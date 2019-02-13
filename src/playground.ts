@@ -1,21 +1,21 @@
-// import HLTV from './index'
-// HLTV.getMatch({id: 2326616}).then(res => console.dir(res, {depth: null})).catch(err => console.log(err))
+import HLTV from './index'
+// HLTV.getMatch({ id: 2330935}).then(res => console.dir(res, {depth: null})).catch(err => console.log(err))
 // HLTV.getMatches().then(res => console.log(res))
 // HLTV.getResults({pages: 1}).then(res => console.log(res))
 // HLTV.getStreams({ loadLinks: true }).then(res => console.log(res))
 // HLTV.getActiveThreads().then(res => console.log(res))
 // HLTV.getTeamRanking().then(res => console.log(res))
 // HLTV.getTeamRanking({ country: 'Thailand' }).then(res => console.log(res))
-// HLTV.connectToScorebot({id: 2330349, onScoreboardUpdate: (data) => {
-//     console.log('scoreboard update!')
-//     console.dir(data, { depth: null })
-// }, onLogUpdate: (data) => {
-//     console.log('log update!')
-//     console.dir(data, { depth: null })
-// }, onFullLogUpdate: (data) => {
-//     console.log('fullLog update!')
-//     console.dir(data, { depth: null })
-// }})
+HLTV.connectToScorebot({ id: 2330886, onScoreboardUpdate: (data) => {
+    console.log('scoreboard update!')
+    console.dir(data, { depth: null })
+}, onLogUpdate: (data) => {
+    console.log('log update!')
+    console.dir(data, { depth: null })
+}, onFullLogUpdate: (data) => {
+    console.log('fullLog update!')
+    console.dir(data, { depth: null })
+}})
 // HLTV.getMatchesStats({startDate: '2017-07-10', endDate: '2017-07-18'}).then(res => console.log(res.length))
 // HLTV.getMatch({id: 2312432}).then(res => console.dir(res, {depth: null})).catch(err => console.log(err))
 // HLTV.getMatchMapStats({id: 49968}).then(res => console.dir(res, { depth: null }))
@@ -24,3 +24,9 @@
 // HLTV.getTeamStats({id: 6669}).then(res => console.dir(res, { depth: null })).catch(err => console.log(err))
 // HLTV.getPlayer({id: 9216}).then(res => console.dir(res, { depth: null })).catch(err => console.log(err))
 // HLTV.getEvent({id: 3773}).then(res => console.dir(res, { depth: null })).catch(err => console.log(err))
+
+
+// 1. 验证 WebSocket Proxy 是否生效
+// 2. 验证 进行中 的比赛是否能通过 getResults() 或者 getMatch({ id: id}) 拿到 Live 的比分
+
+// Docker Redis
